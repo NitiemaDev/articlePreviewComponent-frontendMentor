@@ -1,0 +1,92 @@
+@use './sass/reset';
+@use './sass/colors';
+@use './sass/mixins';
+
+body {
+    @include mixins.flex(column, center, center, 0);
+    min-height: 100vh;
+    background: colors.$light-grayish-blue;
+}
+
+h1 {
+    @include mixins.font-style(colors.$very-dark-blue, 1.4em, 700, normal);
+    margin-bottom: 1.5em;
+}
+
+h4 {
+    @include mixins.font-style(colors.$very-dark-blue, 1em, 700, normal);
+}
+
+p {
+    @include mixins.font-style(colors.$desaturated-dark-blue, 13px, 400, 1.5);
+}
+
+
+.article-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-card {
+    .article-image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+    }
+}
+
+
+
+.article-infos {
+    padding: 40px;
+}
+
+.profil-section {
+    @include mixins.flex(row, space-between, center, 0);
+    margin-top: 1.5em;;
+
+    .profil-part {
+        @include mixins.flex(row, center, center, 0);
+        gap: 12px;
+    }
+
+    .profil-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .profil-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.shareIcon {
+    @include mixins.flex(row, center, center, 0);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: colors.$light-grayish-blue;
+}
+
+.shareIcon i {
+    color: colors.$very-dark-blue;
+    font-size: 1.2em;
+}
