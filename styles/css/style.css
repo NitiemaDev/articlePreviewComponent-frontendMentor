@@ -20,7 +20,7 @@ h1 {
   color: hsl(217, 19%, 35%);
   font-size: 1.4em;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.5;
   margin-bottom: 1.5em;
 }
 
@@ -109,6 +109,34 @@ p {
 .shareIcon i {
   color: hsl(217, 19%, 35%);
   font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.shareIcon:hover {
+  background: hsl(214, 17%, 51%);
+}
+
+.shareIcon:hover i {
+  color: #fff;
+}
+
+@media screen and (max-width: 54em) {
+  .article-card {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 40em) {
+  .article-card {
+    grid-template-columns: 1fr;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+  }
+  .article-card .article-image img {
+    border-radius: 10px 10px 0 0;
+  }
+  h1 {
+    font-size: 1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

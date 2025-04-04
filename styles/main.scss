@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    @include mixins.font-style(colors.$very-dark-blue, 1.4em, 700, normal);
+    @include mixins.font-style(colors.$very-dark-blue, 1.4em, 700, 1.5);
     margin-bottom: 1.5em;
 }
 
@@ -89,4 +89,44 @@ p {
 .shareIcon i {
     color: colors.$very-dark-blue;
     font-size: 1.2em;
+    transition: all 0.3s ease-in-out;
+}
+
+.shareIcon:hover {
+    background: colors.$desaturated-dark-blue;
+}
+
+.shareIcon:hover i {
+    color: #fff;
+}
+
+
+// Responsive Design
+
+@media screen and (max-width: 54em) {
+    
+    .article-card {
+        max-width: 90%;
+    }
+    
+}
+
+
+@media screen and (max-width: 40em) {
+    
+    .article-card {
+        grid-template-columns: 1fr;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        margin: 2rem auto;
+    }
+
+
+    .article-card .article-image  img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+    
 }
