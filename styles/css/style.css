@@ -21,7 +21,7 @@ h1 {
   font-size: 1.2em;
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 h4 {
@@ -35,7 +35,7 @@ p {
   color: hsl(214, 17%, 51%);
   font-size: 13px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .article-card {
@@ -62,7 +62,7 @@ p {
 }
 
 .article-infos {
-  padding: 32px;
+  padding: 20px 32px;
 }
 
 .profil-section {
@@ -164,7 +164,7 @@ p {
   background: hsl(210, 46%, 95%);
 }
 .shareIcon i {
-  color: hsl(217, 19%, 35%);
+  color: hsl(214, 17%, 51%);
   font-size: 1.2em;
 }
 .shareIcon:hover {

@@ -10,7 +10,8 @@ body {
 
 h1 {
     @include mixins.font-style(colors.$very-dark-blue, 1.2em, 700, 1.5);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+
 }
 
 h4 {
@@ -18,7 +19,7 @@ h4 {
 }
 
 p {
-    @include mixins.font-style(colors.$desaturated-dark-blue, 13px, 400, 1.5);
+    @include mixins.font-style(colors.$desaturated-dark-blue, 13px, 400, 1.6);
 }
 
 
@@ -51,7 +52,8 @@ p {
 
 
 .article-infos {
-    padding: 32px;
+    padding: 20px 32px;
+
 }
 
 .profil-section {
@@ -147,7 +149,7 @@ p {
 
 
      i {
-        color: colors.$very-dark-blue;
+        color: colors.$desaturated-dark-blue;
         font-size: 1.2em;
     }
     
