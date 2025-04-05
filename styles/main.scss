@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-    @include mixins.font-style(colors.$very-dark-blue, 1.4em, 700, 1.5);
-    margin-bottom: 1.5em;
+    @include mixins.font-style(colors.$very-dark-blue, 1.2em, 700, 1.5);
+    margin-bottom: 1.3em;
 }
 
 h4 {
@@ -51,12 +51,12 @@ p {
 
 
 .article-infos {
-    padding: 40px;
+    padding: 32px;
 }
 
 .profil-section {
     @include mixins.flex(row, space-between, center, 0);
-    margin-top: 1.5em;
+    margin-top: 1.3em;
 
     .profil-part {
         @include mixins.flex(row, center, center, 0);
@@ -88,16 +88,15 @@ p {
     width: 260px;
     padding: 10px;
     border-radius: 10px;
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: calc(100% + 30px);
     left: 50%;
     transform: translateX(-50%);
 
+    display: none;
+
     &.show {
-        opacity: 1;
-        visibility: visible;
+        display: flex;
     }
 
     &::after {

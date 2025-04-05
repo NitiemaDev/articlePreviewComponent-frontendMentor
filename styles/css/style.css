@@ -18,10 +18,10 @@ body {
 
 h1 {
   color: hsl(217, 19%, 35%);
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.3em;
 }
 
 h4 {
@@ -62,7 +62,7 @@ p {
 }
 
 .article-infos {
-  padding: 40px;
+  padding: 32px;
 }
 
 .profil-section {
@@ -71,7 +71,7 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  margin-top: 1.5em;
+  margin-top: 1.3em;
 }
 .profil-section .profil-part {
   display: flex;
@@ -106,69 +106,14 @@ p {
   width: 260px;
   padding: 10px;
   border-radius: 10px;
-  opacity: 0;
-  visibility: hidden;
   position: absolute;
   bottom: calc(100% + 30px);
   left: 50%;
   transform: translateX(-50%);
+  display: none;
 }
 .tooltip.show {
-  opacity: 1;
-  visibility: visible;
-}
-.tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
-  border-top: 10px solid hsl(217, 19%, 35%);
-}
-.tooltip .tooltip-icons {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-.tooltip .tooltip-icons i {
-  color: hsl(210, 46%, 95%);
-  font-size: 1.2em;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.tooltip .tooltip-icons i:hover {
-  transform: scale(1.2);
-}
-.tooltip p {
-  color: hsl(210, 46%, 95%);
-  font-size: 13px;
-  font-weight: 200;
-  line-height: 1.5;
-  letter-spacing: 4px;
-}
-
-.tooltip {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  background: hsl(217, 19%, 35%);
-  width: 260px;
-  padding: 10px;
-  border-radius: 10px;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-}
-.tooltip.show {
-  opacity: 1;
-  visibility: visible;
 }
 .tooltip::after {
   content: "";
