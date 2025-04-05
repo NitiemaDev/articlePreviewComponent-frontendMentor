@@ -9,12 +9,12 @@ body {
 }
 
 h1 {
-    @include mixins.font-style(colors.$very-dark-blue, 1.4em, 700, 1.5);
-    margin-bottom: 1.5em;
+    @include mixins.font-style(colors.$very-dark-blue, 1.2em, 700, 1.5);
+    margin-bottom: 10px;
 }
 
 h4 {
-    @include mixins.font-style(colors.$very-dark-blue, 1em, 700, normal);
+    @include mixins.font-style(colors.$very-dark-blue, 13px, 700, normal);
 }
 
 p {
@@ -25,7 +25,7 @@ p {
 .article-card {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     background: #fff;
     border-radius: 10px;
@@ -51,12 +51,12 @@ p {
 
 
 .article-infos {
-    padding: 40px;
+    padding: 32px;
 }
 
 .profil-section {
     @include mixins.flex(row, space-between, center, 0);
-    margin-top: 1.5em;
+    margin-top: 1.3em;
 
     .profil-part {
         @include mixins.flex(row, center, center, 0);
@@ -64,8 +64,8 @@ p {
     }
 
     .profil-image {
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         overflow: hidden;
     }
@@ -88,16 +88,15 @@ p {
     width: 260px;
     padding: 10px;
     border-radius: 10px;
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     bottom: calc(100% + 30px);
     left: 50%;
     transform: translateX(-50%);
 
+    display: none;
+
     &.show {
-        opacity: 1;
-        visibility: visible;
+        display: flex;
     }
 
     &::after {
@@ -183,7 +182,7 @@ p {
 }
 
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 48em) {
     
     .article-card {
         grid-template-columns: 1fr;

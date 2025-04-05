@@ -18,15 +18,15 @@ body {
 
 h1 {
   color: hsl(217, 19%, 35%);
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 1.5em;
+  margin-bottom: 10px;
 }
 
 h4 {
   color: hsl(217, 19%, 35%);
-  font-size: 1em;
+  font-size: 13px;
   font-weight: 700;
   line-height: normal;
 }
@@ -41,7 +41,7 @@ p {
 .article-card {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   background: #fff;
   border-radius: 10px;
@@ -62,7 +62,7 @@ p {
 }
 
 .article-infos {
-  padding: 40px;
+  padding: 32px;
 }
 
 .profil-section {
@@ -71,7 +71,7 @@ p {
   justify-content: space-between;
   align-items: center;
   gap: 0;
-  margin-top: 1.5em;
+  margin-top: 1.3em;
 }
 .profil-section .profil-part {
   display: flex;
@@ -82,8 +82,8 @@ p {
   gap: 12px;
 }
 .profil-section .profil-image {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -106,69 +106,14 @@ p {
   width: 260px;
   padding: 10px;
   border-radius: 10px;
-  opacity: 0;
-  visibility: hidden;
   position: absolute;
   bottom: calc(100% + 30px);
   left: 50%;
   transform: translateX(-50%);
+  display: none;
 }
 .tooltip.show {
-  opacity: 1;
-  visibility: visible;
-}
-.tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 10px;
-  border-style: solid;
-  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
-  border-top: 10px solid hsl(217, 19%, 35%);
-}
-.tooltip .tooltip-icons {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-.tooltip .tooltip-icons i {
-  color: hsl(210, 46%, 95%);
-  font-size: 1.2em;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.tooltip .tooltip-icons i:hover {
-  transform: scale(1.2);
-}
-.tooltip p {
-  color: hsl(210, 46%, 95%);
-  font-size: 13px;
-  font-weight: 200;
-  line-height: 1.5;
-  letter-spacing: 4px;
-}
-
-.tooltip {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  background: hsl(217, 19%, 35%);
-  width: 260px;
-  padding: 10px;
-  border-radius: 10px;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-}
-.tooltip.show {
-  opacity: 1;
-  visibility: visible;
 }
 .tooltip::after {
   content: "";
@@ -240,7 +185,7 @@ p {
     max-width: 90%;
   }
 }
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 48em) {
   .article-card {
     grid-template-columns: 1fr;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
