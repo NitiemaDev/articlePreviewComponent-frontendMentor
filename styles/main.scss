@@ -30,6 +30,7 @@ p {
     background: #fff;
     border-radius: 10px;
     box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative; // nouveau code
 }
 
 .article-card {
@@ -55,7 +56,7 @@ p {
 
 .profil-section {
     @include mixins.flex(row, space-between, center, 0);
-    margin-top: 1.5em;;
+    margin-top: 1.5em;
 
     .profil-part {
         @include mixins.flex(row, center, center, 0);
@@ -74,7 +75,67 @@ p {
         height: 100%;
         object-fit: cover;
     }
+
+    .share-container {
+        position: relative;
+    }
 }
+
+
+.tooltip {
+    @include mixins.flex(row, center, center, 12px);
+    background: colors.$very-dark-blue;
+    width: 260px;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: calc(100% + 30px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: colors.$very-dark-blue transparent transparent transparent;
+        border-top: 10px solid colors.$very-dark-blue;
+    }
+
+    .tooltip-icons {
+        @include mixins.flex(row, center, center, 6px);
+    }
+
+    .tooltip-icons i {
+        color: colors.$light-grayish-blue;
+        font-size: 1.2em;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .tooltip-icons i:hover {
+        transform: scale(1.2);
+    }
+
+    p {
+        @include mixins.font-style(colors.$light-grayish-blue, 13px, 200, 1.5);
+        letter-spacing: 4px
+    }
+
+
+}
+
+
 
 .shareIcon {
     @include mixins.flex(row, center, center, 0);
@@ -84,21 +145,31 @@ p {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     background: colors.$light-grayish-blue;
+
+
+     i {
+        color: colors.$very-dark-blue;
+        font-size: 1.2em;
+    }
+    
+    &:hover {
+        background: colors.$desaturated-dark-blue;
+    }
+    
+    &:hover i {
+        color: colors.$light-grayish-blue;
+    }
+    
+    &.active {
+        background: colors.$desaturated-dark-blue;
+        i {
+            color: colors.$light-grayish-blue;
+        }
+    }
+    
 }
 
-.shareIcon i {
-    color: colors.$very-dark-blue;
-    font-size: 1.2em;
-    transition: all 0.3s ease-in-out;
-}
 
-.shareIcon:hover {
-    background: colors.$desaturated-dark-blue;
-}
-
-.shareIcon:hover i {
-    color: #fff;
-}
 
 
 // Responsive Design
@@ -127,6 +198,10 @@ p {
 
     h1 {
         font-size: 1em;
+    }
+
+    h4 {
+        font-size: 13px;
     }
     
 }
