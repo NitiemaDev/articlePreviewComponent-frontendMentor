@@ -21,19 +21,7 @@ h1 {
   font-size: 1.2em;
   font-weight: 700;
   line-height: 1.5;
-<<<<<<< HEAD
   margin-bottom: 12px;
-=======
-<<<<<<< HEAD
-  margin-bottom: 12px;
-=======
-<<<<<<< HEAD
-  margin-bottom: 10px;
-=======
-  margin-bottom: 1.3em;
->>>>>>> 86060fc5f1ebad984a12645e425fb69f68bfe9c7
->>>>>>> 63924e0a1b2c8dd61c6f5085f9ed99219446aff0
->>>>>>> bf3cb6a508d2064cfcc68296fd79644b97dfc80f
 }
 
 h4 {
@@ -190,6 +178,46 @@ p {
 }
 .shareIcon.active i {
   color: hsl(210, 46%, 95%);
+}
+
+.tooltip__mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  background: hsl(217, 19%, 35%);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 65px;
+  padding: 10px 32px;
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  display: none;
+}
+.tooltip__mobile.displayMobile {
+  display: flex;
+}
+.tooltip__mobile p {
+  color: hsl(210, 46%, 95%);
+  font-size: 1em;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 6px;
+}
+.tooltip__mobile .tooltip-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.tooltip__mobile .tooltip-icons i {
+  color: hsl(210, 46%, 95%);
+  font-size: 1.5em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 54em) {

@@ -172,6 +172,42 @@ p {
 
 
 
+// tooltip for mobile
+.tooltip__mobile {
+    @include mixins.flex(row, start, center, 20px);
+    background: colors.$very-dark-blue;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 65px;
+    padding: 10px 32px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    display: none;
+
+    &.displayMobile {
+        display: flex
+    }
+
+    p {
+        @include mixins.font-style(colors.$light-grayish-blue, 1em, 200, 1.5);
+        letter-spacing: 6px;
+    }
+
+    .tooltip-icons {
+        @include mixins.flex(row, center, center, 12px);
+    }
+
+    .tooltip-icons i {
+        color: colors.$light-grayish-blue;
+        font-size: 1.5em;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+}
+
+
+
 
 // Responsive Design
 
@@ -204,5 +240,7 @@ p {
     h4 {
         font-size: 13px;
     }
-    
+
+
+   
 }
